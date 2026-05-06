@@ -1,140 +1,53 @@
-/* Home page CSS */
-.home-about-header {
-    background-color: #1e2753;
+
+#sky {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 0;
 }
 
-/* div.header-text {
-    flex-direction: column
-} */
-
-
-
-.bg-dark-mode {
-    background-color: #445385;
+.star {
+  position: absolute;
+  color: rgba(255, 255, 255, 0.95);
+  font-family: Georgia, serif;
+  user-select: none;
+  will-change: transform, opacity;
 }
 
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
 
-/* Home page CSS */
-.header-dark-mode {
-    background-color: #1e2753;
-}
+  /* Main winter-night gradient */
+  background:
+    radial-gradient(
+      circle at 50% 120%,
+      rgba(255, 255, 255, 0.05) 0%,
+      rgba(255, 255, 255, 0) 60%
+    ),
+    radial-gradient(
+      circle at 80% 0%,
+      rgba(0, 140, 255, 0.25) 0%,
+      rgba(0, 0, 0, 0) 50%
+    ),
+    radial-gradient(
+      circle at 20% -10%,
+      rgba(255, 200, 255, 0.25) 0%,
+      rgba(0, 0, 0, 0) 45%
+    ),
+    linear-gradient(
+      to bottom,
+      #0a0f1e 0%,
+      #0b1224 30%,
+      #08101f 60%,
+      #050b16 100%
+    );
 
-/* div.header-text {
-    flex-direction: column
-} */
-
-div h2.intro-header-dark-mode {
-    color: #cfe2f6;
-}
-
-div h2.greet-line-dark-mode {
-    color: #cfe2f6;
-}
-
-div h1.my-name-dark-mode {
-    font-family: "Meow Script";
-    font-size: 45px;
-    color: #cfe2f6;
-}
-
-div.learn-more-button-dark-mode {
-    background-color: #cfe2f6;
-    font-family: "Gamja Flower";
-    font-size: 19px;
-    padding: 10px;
-    border-radius: 15px;    
-}
-
-/* learn more button text color */
-a.learn-button-dark-mode { 
-    color:#342e44;
-}
-
-.fs-bg-dark-mode {
-    background-color: #445385;
-}
-
-div.semester-title-dark-mode {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-    margin-top: 15px;
-    margin-bottom: 20px;
-    color:#cfe2f6;
-}
-
-div.semester-text-dark-mode {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-    margin-top: 15px;
-    color:#cfe2f6;
-}
-
-
-
-/* About page CSS */
-
-
-.about-header {
-    background-color: #1e2753;
-}
-
-div.about-text {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    color:#cfe2f6;
-    font-family: "Gamja Flower";
-    font-weight: 400;
-    font-style: normal;
-    width: 99%;
-    text-align: center;
-}
-
-
-
-
-.faq-bg {
-    background-color: #445385;
-}
-
-.faq-text {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    color:#cfe2f6;
-}
-
-
-
-
-/* Target a tag for the Raena Nguyen clickable thing in the nav */
-
-div h3.faq-question {
-    background-color: #1f2659;
-    padding: 15px;
-    border-top-left-radius: 15px;
-    border-top-right-radius: 15px;
-    font-family: "Gamja Flower";
-    font-size: 25px;
-    text-align: center;
-    width: 75%;
-    color: #cfe2f6;
-}
-
-div p.faq-answer {
-    background-color: #1c1352;
-    padding: 15px;
-    padding-top: 25px;
-    padding-bottom: 25px;
-    border-bottom-left-radius: 15px;
-    border-bottom-right-radius: 15px;
-    font-family: "Host Grotesk";
-    font-size: 16px;
-    text-align: center;
-    width: 75%;
-    color: #d5cff6;
+  background-attachment: fixed;
+  color: white;
+  overflow-x: hidden;
 }

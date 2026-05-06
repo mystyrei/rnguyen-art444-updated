@@ -31,6 +31,15 @@ div.mobile-menu {
   display: none;
 }
 
+/* Modal Content (image) */
+.modal-content {
+  margin: auto;
+  display: block;
+  width: auto;
+  height: auto;
+  max-width: 75%;
+  max-height: 75%;
+}
 
  div.semester-text p {
     width: 65%;
@@ -54,6 +63,7 @@ div.mobile-menu {
   section.fall-spring-semesters {
     display: flex;
     flex-direction: column;
+    gap: 60px;
   }
   div.gallery {
     display: flex;
@@ -141,6 +151,16 @@ div.question.faq-answer {
     width: 80%;
     display: block;
   }
+
+  /* Modal Content (image) */
+.modal-content {
+  margin: auto;
+  display: block;
+  width: auto;
+  height: auto;
+  max-width: 90%;
+  max-height: 90%;
+}
 
   div.semester-text p {
     text-align: center;

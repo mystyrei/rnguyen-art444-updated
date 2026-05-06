@@ -17,6 +17,32 @@ function menuButton() {
         x.style.display = "none";
  }
 
+// Get the modal
+var modal = document.getElementById('myModal');
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() { 
+  modal.style.display = "none";
+}
+
+// Get all images and insert the clicked image inside the modal
+// Get the content of the image description and insert it inside the modal image caption
+var images = document.getElementsByClassName('pic');
+var modalImg = document.getElementById("picture");
+var i;
+for (i = 0; i < images.length; i++) {
+  images[i].onclick = function(){
+    modal.style.display = "block";
+    modalImg.src = this.src;
+    modalImg.alt = this.alt;
+    captionText.innerHTML = this.nextElementSibling.innerHTML;
+  }
+}
+
+
  //open faq to show answers
 
 const faqToggle = document.querySelectorAll('.question');
@@ -28,7 +54,8 @@ for (let i = 0; i < faqToggle.length; i++) {
 
 function darkMode() {
 
-    document.getElementById("ld-icon").src = "images/light-mode-svgrepo-com.svg"; //switches svg to lightmode icon when in dark mode
+    if (document.getElementById("ld-icon").src = "images/moon-dark-theme-svgrepo-com.svg") {
+      document.getElementById("ld-icon").src = "images/light-mode-svgrepo-com.svg"; //switches svg to lightmode icon when in dark mode
         
 
     const homeaboutheaderDark = document.querySelectorAll('.home-about-header')
@@ -105,16 +132,40 @@ function darkMode() {
         for (let i = 0; i < faqansDark.length; i++) {
             faqansDark[i].classList.toggle('faq-answer-dark-mode');        
         }
- // if light mode icon is there, onclick switches it back to dark mode icon and removes class list dark mode
-    // if (document.getElementById("ld-icon").src = "images/light-mode-svgrepo-com.svg") {
-    //     document.getElementById("ld-icon").src = "images/moon-dark-theme-svgrepo-com.svg"
 
-    // } else {
+    const dividerDark = document.querySelectorAll('.rounded')
+        for (let i = 0; i < dividerDark.length; i++) {
+            dividerDark[i].classList.toggle('rounded-dark-mode');
+        }  
+     
+    const picborderDark = document.querySelectorAll('.pic')
+        for (let i = 0; i < picborderDark.length; i++) {
+            picborderDark[i].classList.toggle('pic-dark-mode');
+        }      
+    } else {
+        if (document.getElementById("ld-icon").src = "images/light-mode-svgrepo-com.svg") {
+            document.getElementById("ld-icon").src = "images/moon-dark-theme-svgrepo-com.svg";
+            var element = document.body;
+                element.classList.remove("dark-mode");
+                console.log
+    
+        }
+    }
+}        
+ // if light mode icon is there, onclick switches it back to dark mode icon and removes class list dark mode
+    //  if (document.getElementById("ld-icon").src = "images/light-mode-svgrepo-com.svg") {
+    //      var element = document.body;
+    //      element.classList.remove("dark-mode");
+         
+
+    //   } else {
+    //     document.getElementById("ld-icon").src = "images/moon-dark-theme-svgrepo-com.svg"
+    //     var element = document.body;
+    //     element.classList.add('dark-mode');
+    // //  }
+
 
     // }
-
-
-    }
 
 
 
