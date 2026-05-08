@@ -45,10 +45,22 @@ for (i = 0; i < images.length; i++) {
 
  //open faq to show answers
 
+// const faqToggle = document.querySelectorAll('.question');
+// for (let i = 0; i < faqToggle.length; i++) {
+//     faqToggle[i].addEventListener("click", function() { this.classList.toggle('.faq-open') });
+//     console.log (doesitevenwork);
+// }
+
 const faqToggle = document.querySelectorAll('.question');
+
 for (let i = 0; i < faqToggle.length; i++) {
-    faqToggle[i].addEventListener("click", function() { this.classList.toggle('faq-open') });
-}
+    faqToggle[i].addEventListener("click", faqOpen);
+    }
+ function faqOpen () {
+     this.classList.toggle('faq-open');
+ }
+
+
 
 // light and dark mode
 
