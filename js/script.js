@@ -51,14 +51,14 @@ for (i = 0; i < images.length; i++) {
 //     console.log (doesitevenwork);
 // }
 
-const faqToggle = document.querySelectorAll('.question');
+// const faqToggle = document.querySelectorAll('.question');
 
-for (let i = 0; i < faqToggle.length; i++) {
-    faqToggle[i].addEventListener("click", faqOpen);
-    }
- function faqOpen () {
-     this.classList.toggle('faq-open');
- }
+// for (let i = 0; i < faqToggle.length; i++) {
+//     faqToggle[i].addEventListener("click", faqOpen);
+//     }
+//  function faqOpen () {
+//      this.classList.toggle('faq-open');
+//  }
 
 
 
